@@ -89,7 +89,7 @@ COPY /scripts/run-e2e-tests.sh /entrypoint.sh
 # Set the HOME environment variable for the test project
 ENV HOME=/protractor/project
 RUN groupadd jenkins
-RUN useradd -g jenkins jenkins 
+RUN useradd jenkins -u 488 -g 485 
 # Set the file access permissions (read, write and access) recursively for the new folders
 RUN chmod -Rf 777 .
 
